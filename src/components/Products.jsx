@@ -1,8 +1,8 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import productWhole from '../assets/images/product-whole.png';
-import productGround from '../assets/images/product-ground.png';
-import productPackaging from '../assets/images/product-packaging.png';
+import productWhole from '../assets/images/product-whole.webp';
+import productGround from '../assets/images/product-ground.webp';
+import productPackaging from '../assets/images/product-packaging.webp';
 
 const products = [
     {

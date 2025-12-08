@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { HiCheckCircle } from 'react-icons/hi';
-import aboutImage from '../assets/images/about-story.png';
+import aboutImage from '../assets/images/about-story.webp';
 
 const About = () => {
     const features = [
