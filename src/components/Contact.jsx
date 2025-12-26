@@ -64,7 +64,7 @@ const Contact = () => {
                                 </div>
                                 <div>
                                     <p className="text-white/60 text-sm">Email Us</p>
-                                    <a href="mailto:export@primusorigin.com" className="text-lg font-medium hover:text-accent transition-colors">export@primusorigin.com</a>
+                                    <a href="mailto:primusoriginbusiness@gmail.com" className="text-lg font-medium hover:text-accent transition-colors">primusoriginbusiness@gmail.com</a>
                                 </div>
                             </div>
 
@@ -74,17 +74,7 @@ const Contact = () => {
                                 </div>
                                 <div>
                                     <p className="text-white/60 text-sm">Call Us</p>
-                                    <a href="tel:+919876543210" className="text-lg font-medium hover:text-accent transition-colors">+91 98765 43210</a>
-                                </div>
-                            </div>
-
-                            <div className="flex items-start space-x-4">
-                                <div className="bg-white/10 p-3 rounded-full">
-                                    <HiLocationMarker className="text-xl text-accent" />
-                                </div>
-                                <div>
-                                    <p className="text-white/60 text-sm">Visit Us</p>
-                                    <p className="text-lg font-medium">Kochi, Kerala, India - 682001</p>
+                                    <a href="tel:+917736879032" className="text-lg font-medium hover:text-accent transition-colors">+91 77368 79032</a>
                                 </div>
                             </div>
                         </div>
