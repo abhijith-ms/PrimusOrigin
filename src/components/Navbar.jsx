@@ -46,7 +46,7 @@ const Navbar = () => {
                 <a
                     href="#home"
                     onClick={(e) => handleScrollTo(e, '#home')}
-                    className={`text-2xl font-serif font-bold tracking-wide ${scrolled ? 'text-primary' : 'text-primary md:text-white'
+                    className={`text-2xl font-serif font-bold tracking-wide ${scrolled ? 'text-primary' : 'text-white'
                         }`}
                 >
                     PrimusOrigin
@@ -77,7 +77,7 @@ const Navbar = () => {
                 {/* Mobile Menu Button */}
                 <button
                     onClick={() => setIsOpen(!isOpen)}
-                    className={`md:hidden text-2xl ${scrolled ? 'text-primary' : 'text-primary'}`}
+                    className={`md:hidden text-2xl ${scrolled ? 'text-primary' : 'text-white'}`}
                 >
                     {isOpen ? <HiX /> : <HiMenuAlt3 />}
                 </button>
