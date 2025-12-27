@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { HiMail, HiPhone, HiLocationMarker } from 'react-icons/hi';
+import { HiMail, HiPhone, HiLocationMarker, HiCheckCircle } from 'react-icons/hi';
 
 const Contact = () => {
     const [formStatus, setFormStatus] = useState(null); // null, 'submitting', 'success', 'error'
@@ -10,28 +10,32 @@ const Contact = () => {
         setFormStatus('submitting');
 
         const form = e.target;
-        const data = new FormData(form);
-
-        // Replace YOUR_FORMSPREE_ID with your actual Formspree form ID
-        // Example: https://formspree.io/f/xvgzqjrl
-        const FORMSPREE_ENDPOINT = "https://formspree.io/f/YOUR_FORMSPREE_ID";
+        const formData = new FormData(form);
+        
+        // Add Web3Forms access key - you'll need to get this from web3forms.com
+        formData.append("access_key", "30ca9965-6e31-4771-8560-38d0c216462d");
+        
+        // Optional: Add additional fields for better email formatting
+        formData.append("subject", "New Business Enquiry from PrimusOrigin Website");
+        formData.append("from_name", "PrimusOrigin Contact Form");
 
         try {
-            const response = await fetch(FORMSPREE_ENDPOINT, {
-                method: 'POST',
-                body: data,
-                headers: {
-                    'Accept': 'application/json'
-                }
+            const response = await fetch("https://api.web3forms.com/submit", {
+                method: "POST",
+                body: formData
             });
 
-            if (response.ok) {
+            const data = await response.json();
+
+            if (data.success) {
                 setFormStatus('success');
                 form.reset();
             } else {
+                console.log("Error", data);
                 setFormStatus('error');
             }
         } catch (error) {
+            console.log("Error", error);
             setFormStatus('error');
         }
     };
@@ -91,7 +95,7 @@ const Contact = () => {
                         {formStatus === 'success' ? (
                             <div className="h-full flex flex-col items-center justify-center text-center">
                                 <div className="w-16 h-16 bg-green-100 text-green-600 rounded-full flex items-center justify-center mb-4">
-                                    <HiShieldCheck className="text-3xl" />
+                                    <HiCheckCircle className="text-3xl" />
                                 </div>
                                 <h3 className="text-2xl font-bold text-primary mb-2">Message Sent!</h3>
                                 <p className="text-text/70">Thank you for your enquiry. We will get back to you shortly.</p>
