@@ -29,9 +29,9 @@ const Quality = () => {
     ];
 
     return (
-        <section id="quality" className="py-20 bg-bg">
-            <div className="container mx-auto px-6">
-                <div className="flex flex-col lg:flex-row gap-16 items-center">
+        <section className="py-12 md:py-20 bg-bg">
+            <div className="container mx-auto px-4 md:px-6">
+                <div className="flex flex-col lg:flex-row gap-12 md:gap-16 items-center">
 
                     {/* Content Side */}
                     <motion.div
@@ -42,31 +42,31 @@ const Quality = () => {
                         className="w-full lg:w-1/2"
                     >
                         <span className="text-secondary font-semibold tracking-wider uppercase text-sm mb-2 block">Quality Assurance</span>
-                        <h2 className="text-4xl md:text-5xl font-serif font-bold text-primary mb-6">
+                        <h2 className="text-3xl md:text-4xl lg:text-5xl font-serif font-bold text-primary mb-6">
                             Uncompromising Standards
                         </h2>
-                        <p className="text-text/80 text-lg mb-8 leading-relaxed">
+                        <p className="text-text/80 text-base md:text-lg mb-6 md:mb-8 leading-relaxed">
                             Quality is not just a buzzword for us; it's our core promise.
                             Our state-of-the-art processing facility ensures that every batch meets international safety and hygiene standards.
                         </p>
 
-                        <div className="grid grid-cols-2 gap-4 mb-8">
+                        <div className="grid grid-cols-2 gap-3 md:gap-4 mb-6 md:mb-8">
                             {certifications.map((cert, index) => (
-                                <div key={index} className={`px-4 py-2 rounded-lg font-semibold text-center ${cert.color}`}>
+                                <div key={index} className={`px-3 md:px-4 py-2 rounded-lg font-semibold text-center text-xs md:text-sm ${cert.color}`}>
                                     {cert.name}
                                 </div>
                             ))}
                         </div>
 
-                        <div className="space-y-6">
+                        <div className="space-y-4 md:space-y-6">
                             {checks.map((check, index) => (
-                                <div key={index} className="flex items-start space-x-4">
-                                    <div className="bg-white p-3 rounded-full shadow-sm text-accent">
-                                        <check.icon className="text-2xl" />
+                                <div key={index} className="flex items-start space-x-3 md:space-x-4">
+                                    <div className="bg-white p-2 md:p-3 rounded-full shadow-sm text-accent flex-shrink-0">
+                                        <check.icon className="text-xl md:text-2xl" />
                                     </div>
                                     <div>
-                                        <h4 className="text-xl font-bold text-primary">{check.title}</h4>
-                                        <p className="text-text/70">{check.description}</p>
+                                        <h4 className="text-lg md:text-xl font-bold text-primary">{check.title}</h4>
+                                        <p className="text-text/70 text-sm md:text-base">{check.description}</p>
                                     </div>
                                 </div>
                             ))}

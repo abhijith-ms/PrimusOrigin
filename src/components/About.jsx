@@ -12,9 +12,9 @@ const About = () => {
     ];
 
     return (
-        <section id="about" className="py-20 bg-bg">
-            <div className="container mx-auto px-6">
-                <div className="flex flex-col md:flex-row items-center gap-12">
+        <section className="py-12 md:py-20 bg-bg">
+            <div className="container mx-auto px-4 md:px-6">
+                <div className="flex flex-col md:flex-row items-center gap-8 md:gap-12">
                     {/* Image Side */}
                     <motion.div
                         initial={{ opacity: 0, x: -50 }}
@@ -44,10 +44,10 @@ const About = () => {
                         className="w-full md:w-1/2"
                     >
                         <span className="text-secondary font-semibold tracking-wider uppercase text-sm mb-2 block">Our Story</span>
-                        <h2 className="text-4xl md:text-5xl font-serif font-bold text-primary mb-6">
+                        <h2 className="text-3xl md:text-4xl lg:text-5xl font-serif font-bold text-primary mb-6">
                             Rooted in Tradition, <br /> Driven by Quality
                         </h2>
-                        <p className="text-text/80 text-lg mb-8 leading-relaxed">
+                        <p className="text-text/80 text-base md:text-lg mb-6 md:mb-8 leading-relaxed">
                             PrimusOrigin stands as a bridge between the rich spice heritage of India and the global palate.
                             We specialize in sourcing the finest black pepper directly from the plantations of Kerala,
                             ensuring that every grain retains its authentic aroma and potency.

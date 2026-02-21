@@ -1,12 +1,12 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import heroBg from '../assets/images/hero-bg.webp';
 
 const Hero = () => {
     return (
         <section
-            id="home"
-            className="relative min-h-screen flex items-center justify-center bg-primary overflow-hidden pt-20"
+            className="relative min-h-screen flex items-center justify-center bg-primary overflow-hidden pt-24 md:pt-28"
         >
             {/* Background Elements */}
             <div className="absolute inset-0 bg-gradient-to-br from-primary via-[#1a4d3d] to-secondary opacity-90"></div>
@@ -24,41 +24,43 @@ const Hero = () => {
                 className="absolute bottom-20 left-10 w-96 h-96 bg-secondary/20 rounded-full blur-3xl"
             />
 
-            <div className="container mx-auto px-6 relative z-10 text-center text-white">
+            <div className="container mx-auto px-4 md:px-6 relative z-10 text-center text-white">
                 <motion.div
                     initial={{ opacity: 0, y: 30 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8, ease: "easeOut" }}
                 >
-                    <span className="inline-block py-1 px-3 rounded-full bg-white/10 border border-white/20 text-accent text-sm tracking-widest uppercase mb-6 backdrop-blur-sm">
+                    <span className="inline-block py-1 px-3 rounded-full bg-white/10 border border-white/20 text-accent text-xs md:text-sm tracking-widest uppercase mb-4 md:mb-6 backdrop-blur-sm">
                         Premium Export Quality
                     </span>
-                    <h1 className="text-5xl md:text-7xl font-serif font-bold leading-tight mb-6">
+                    <h1 className="text-4xl md:text-5xl lg:text-7xl font-serif font-bold leading-tight mb-4 md:mb-6">
                         PrimusOrigin <br />
                         <span className="text-accent">Finest Source</span>, First in Quality
                     </h1>
-                    <p className="text-lg md:text-xl text-white/80 max-w-2xl mx-auto mb-10 font-light">
+                    <p className="text-base md:text-lg lg:text-xl text-white/80 max-w-2xl mx-auto mb-8 md:mb-10 font-light px-4">
                         Delivering the authentic essence of Indian spices to the world.
                         Sourced from the lush gardens of Kerala, processed with precision.
                     </p>
 
-                    <div className="flex flex-col md:flex-row items-center justify-center gap-4">
-                        <motion.a
-                            href="#contact"
-                            whileHover={{ scale: 1.05 }}
-                            whileTap={{ scale: 0.95 }}
-                            className="px-8 py-4 bg-accent text-primary font-bold rounded-full shadow-lg hover:shadow-xl transition-all w-full md:w-auto"
-                        >
-                            Contact Us
-                        </motion.a>
-                        <motion.a
-                            href="#products"
-                            whileHover={{ scale: 1.05 }}
-                            whileTap={{ scale: 0.95 }}
-                            className="px-8 py-4 bg-transparent border-2 border-white/30 text-white font-semibold rounded-full hover:bg-white/10 transition-all w-full md:w-auto"
-                        >
-                            View Products
-                        </motion.a>
+                    <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+                        <Link to="/contact">
+                            <motion.button
+                                whileHover={{ scale: 1.05 }}
+                                whileTap={{ scale: 0.95 }}
+                                className="px-8 py-4 bg-accent text-primary font-bold rounded-full shadow-lg hover:shadow-xl transition-all w-full sm:w-auto"
+                            >
+                                Contact Us
+                            </motion.button>
+                        </Link>
+                        <Link to="/products">
+                            <motion.button
+                                whileHover={{ scale: 1.05 }}
+                                whileTap={{ scale: 0.95 }}
+                                className="px-8 py-4 bg-transparent border-2 border-white/30 text-white font-semibold rounded-full hover:bg-white/10 transition-all w-full sm:w-auto"
+                            >
+                                View Products
+                            </motion.button>
+                        </Link>
                     </div>
                 </motion.div>
 
@@ -67,7 +69,7 @@ const Hero = () => {
                     initial={{ opacity: 0, y: 50 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ delay: 0.4, duration: 0.8 }}
-                    className="mt-16 relative max-w-4xl mx-auto"
+                    className="mt-12 md:mt-16 relative max-w-4xl mx-auto px-4"
                 >
                     <div className="aspect-[16/9] rounded-2xl overflow-hidden shadow-2xl bg-white/5 backdrop-blur-sm border border-white/10 flex items-center justify-center relative group">
                         <div className="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent z-10"></div>
@@ -76,9 +78,9 @@ const Hero = () => {
                             alt="Premium Black Pepper from Kerala"
                             className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700"
                         />
-                        <div className="absolute bottom-8 left-8 z-20 text-left">
-                            <p className="text-accent text-sm uppercase tracking-wider mb-2">Origin: Kerala, India</p>
-                            <h3 className="text-2xl font-serif">World's Best Black Pepper</h3>
+                        <div className="absolute bottom-4 md:bottom-8 left-4 md:left-8 z-20 text-left">
+                            <p className="text-accent text-xs md:text-sm uppercase tracking-wider mb-1 md:mb-2">Origin: Kerala, India</p>
+                            <h3 className="text-lg md:text-2xl font-serif">World's Best Black Pepper</h3>
                         </div>
                     </div>
                 </motion.div>

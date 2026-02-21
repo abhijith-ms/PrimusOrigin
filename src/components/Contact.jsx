@@ -12,10 +12,7 @@ const Contact = () => {
         const form = e.target;
         const formData = new FormData(form);
         
-        // Add Web3Forms access key - you'll need to get this from web3forms.com
         formData.append("access_key", "30ca9965-6e31-4771-8560-38d0c216462d");
-        
-        // Optional: Add additional fields for better email formatting
         formData.append("subject", "New Business Enquiry from PrimusOrigin Website");
         formData.append("from_name", "PrimusOrigin Contact Form");
 
@@ -30,6 +27,7 @@ const Contact = () => {
             if (data.success) {
                 setFormStatus('success');
                 form.reset();
+                setTimeout(() => setFormStatus(null), 5000);
             } else {
                 console.log("Error", data);
                 setFormStatus('error');
@@ -41,14 +39,14 @@ const Contact = () => {
     };
 
     return (
-        <section id="contact" className="py-20 bg-white">
-            <div className="container mx-auto px-6">
-                <div className="text-center mb-16">
+        <section className="py-12 md:py-20 bg-white">
+            <div className="container mx-auto px-4 md:px-6">
+                <div className="text-center mb-12 md:mb-16">
                     <span className="text-secondary font-semibold tracking-wider uppercase text-sm mb-2 block">Get in Touch</span>
-                    <h2 className="text-4xl md:text-5xl font-serif font-bold text-primary">Start Your Order</h2>
+                    <h2 className="text-3xl md:text-4xl lg:text-5xl font-serif font-bold text-primary">Start Your Order</h2>
                 </div>
 
-                <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 max-w-6xl mx-auto">
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 max-w-6xl mx-auto">
 
                     {/* Contact Info */}
                     <motion.div
@@ -78,7 +76,7 @@ const Contact = () => {
                                 </div>
                                 <div>
                                     <p className="text-white/60 text-sm">Call Us</p>
-                                    <a href="tel:+917736879032" className="flex items-center gap-2 text-lg font-medium hover:text-accent transition-colors">+91 77368 79032</a>
+                                    <a href="tel:+918762154637" className="flex items-center gap-2 text-lg font-medium hover:text-accent transition-colors">+91 87621 54637</a>
                                 </div>
                             </div>
                         </div>
