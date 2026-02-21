@@ -39,11 +39,14 @@ const Contact = () => {
     };
 
     return (
-        <section className="py-12 md:py-20 bg-white">
+        <section className="py-16 md:py-24 bg-bg">
             <div className="container mx-auto px-4 md:px-6">
                 <div className="text-center mb-12 md:mb-16">
                     <span className="text-secondary font-semibold tracking-wider uppercase text-sm mb-2 block">Get in Touch</span>
-                    <h2 className="text-3xl md:text-4xl lg:text-5xl font-serif font-bold text-primary">Start Your Order</h2>
+                    <h2 className="text-3xl md:text-4xl lg:text-5xl font-serif font-bold text-primary mb-4">Start Your Export Journey</h2>
+                    <p className="text-text/70 text-base md:text-lg max-w-2xl mx-auto">
+                        Ready to explore premium Indian products? Contact us for inquiries, samples, or bulk orders.
+                    </p>
                 </div>
 
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 max-w-6xl mx-auto">
@@ -53,30 +56,61 @@ const Contact = () => {
                         initial={{ opacity: 0, y: 30 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
-                        className="bg-primary text-white rounded-3xl p-10 shadow-2xl relative overflow-hidden"
+                        className="bg-primary text-white rounded-3xl p-8 md:p-10 shadow-2xl relative overflow-hidden"
                     >
                         <div className="absolute top-0 right-0 w-64 h-64 bg-accent/10 rounded-full blur-3xl -mr-16 -mt-16"></div>
 
-                        <h3 className="text-2xl font-serif font-bold mb-8">Contact Information</h3>
+                        <h3 className="text-2xl font-serif font-bold mb-6 relative z-10">Contact Information</h3>
 
-                        <div className="space-y-8 relative z-10">
+                        <div className="space-y-6 relative z-10">
                             <div className="flex items-start space-x-4">
-                                <div className="bg-white/10 p-3 rounded-full">
+                                <div className="bg-white/10 p-3 rounded-full flex-shrink-0">
                                     <HiMail className="text-xl text-accent" />
                                 </div>
                                 <div>
-                                    <p className="text-white/60 text-sm">Email Us</p>
-                                    <a href="mailto:primusoriginbusiness@gmail.com" className="flex items-center gap-2 text-lg font-medium hover:text-accent transition-colors break-all">primusoriginbusiness@gmail.com</a>
+                                    <p className="text-white/60 text-sm mb-1">Email Us</p>
+                                    <a href="mailto:primusoriginbusiness@gmail.com" className="text-base hover:text-accent transition-colors break-all">
+                                        primusoriginbusiness@gmail.com
+                                    </a>
                                 </div>
                             </div>
 
                             <div className="flex items-start space-x-4">
-                                <div className="bg-white/10 p-3 rounded-full">
+                                <div className="bg-white/10 p-3 rounded-full flex-shrink-0">
                                     <HiPhone className="text-xl text-accent" />
                                 </div>
                                 <div>
-                                    <p className="text-white/60 text-sm">Call Us</p>
-                                    <a href="tel:+918762154637" className="flex items-center gap-2 text-lg font-medium hover:text-accent transition-colors">+91 87621 54637</a>
+                                    <p className="text-white/60 text-sm mb-1">Call / WhatsApp</p>
+                                    <a href="tel:+918762154637" className="text-base hover:text-accent transition-colors block">
+                                        +91 87621 54637
+                                    </a>
+                                    <a 
+                                        href="https://wa.me/918762154637" 
+                                        target="_blank" 
+                                        rel="noopener noreferrer"
+                                        className="inline-flex items-center gap-2 mt-2 text-sm bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded-full transition-colors"
+                                    >
+                                        <span>💬</span> Chat on WhatsApp
+                                    </a>
+                                </div>
+                            </div>
+
+                            <div className="flex items-start space-x-4">
+                                <div className="bg-white/10 p-3 rounded-full flex-shrink-0">
+                                    <HiLocationMarker className="text-xl text-accent" />
+                                </div>
+                                <div>
+                                    <p className="text-white/60 text-sm mb-1">Location</p>
+                                    <p className="text-base">Kerala, India</p>
+                                </div>
+                            </div>
+
+                            <div className="pt-6 border-t border-white/10">
+                                <h4 className="text-sm font-semibold text-accent mb-3">Business Hours</h4>
+                                <div className="space-y-2 text-sm text-white/80">
+                                    <p>Monday - Friday: 9:00 AM - 6:00 PM IST</p>
+                                    <p>Saturday: 9:00 AM - 2:00 PM IST</p>
+                                    <p>Sunday: Closed</p>
                                 </div>
                             </div>
                         </div>
@@ -88,7 +122,7 @@ const Contact = () => {
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
                         transition={{ delay: 0.2 }}
-                        className="bg-bg rounded-3xl p-10 shadow-lg"
+                        className="bg-white rounded-3xl p-8 md:p-10 shadow-lg border border-primary/10"
                     >
                         {formStatus === 'success' ? (
                             <div className="h-full flex flex-col items-center justify-center text-center">
@@ -114,7 +148,7 @@ const Contact = () => {
                                             id="name"
                                             name="name"
                                             required
-                                            className="w-full px-4 py-3 rounded-lg bg-white border border-gray-200 focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all"
+                                            className="w-full px-4 py-3 rounded-lg bg-bg border border-gray-200 focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all"
                                             placeholder="John Doe"
                                         />
                                     </div>
@@ -125,7 +159,7 @@ const Contact = () => {
                                             id="email"
                                             name="email"
                                             required
-                                            className="w-full px-4 py-3 rounded-lg bg-white border border-gray-200 focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all"
+                                            className="w-full px-4 py-3 rounded-lg bg-bg border border-gray-200 focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all"
                                             placeholder="john@company.com"
                                         />
                                     </div>
@@ -138,19 +172,53 @@ const Contact = () => {
                                             type="text"
                                             id="company"
                                             name="company"
-                                            className="w-full px-4 py-3 rounded-lg bg-white border border-gray-200 focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all"
+                                            className="w-full px-4 py-3 rounded-lg bg-bg border border-gray-200 focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all"
                                             placeholder="Your Company Ltd"
                                         />
                                     </div>
                                     <div>
-                                        <label htmlFor="country" className="block text-sm font-medium text-text/70 mb-2">Country</label>
+                                        <label htmlFor="country" className="block text-sm font-medium text-text/70 mb-2">Country *</label>
                                         <input
                                             type="text"
                                             id="country"
                                             name="country"
-                                            className="w-full px-4 py-3 rounded-lg bg-white border border-gray-200 focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all"
+                                            required
+                                            className="w-full px-4 py-3 rounded-lg bg-bg border border-gray-200 focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all"
                                             placeholder="USA"
                                         />
+                                    </div>
+                                </div>
+
+                                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                                    <div>
+                                        <label htmlFor="product_category" className="block text-sm font-medium text-text/70 mb-2">Product Category *</label>
+                                        <select
+                                            id="product_category"
+                                            name="product_category"
+                                            required
+                                            className="w-full px-4 py-3 rounded-lg bg-bg border border-gray-200 focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all"
+                                        >
+                                            <option value="">Select Category</option>
+                                            <option value="spices">Spices & Condiments</option>
+                                            <option value="textiles">Textiles & Garments</option>
+                                            <option value="grains">Grains & Cereals</option>
+                                            <option value="other">Other</option>
+                                        </select>
+                                    </div>
+                                    <div>
+                                        <label htmlFor="order_type" className="block text-sm font-medium text-text/70 mb-2">Order Type *</label>
+                                        <select
+                                            id="order_type"
+                                            name="order_type"
+                                            required
+                                            className="w-full px-4 py-3 rounded-lg bg-bg border border-gray-200 focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all"
+                                        >
+                                            <option value="">Select Type</option>
+                                            <option value="bulk">Bulk Order</option>
+                                            <option value="retail">Retail Order</option>
+                                            <option value="sample">Sample Request</option>
+                                            <option value="inquiry">General Inquiry</option>
+                                        </select>
                                     </div>
                                 </div>
 

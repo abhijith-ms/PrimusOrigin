@@ -1,99 +1,166 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { HiShieldCheck, HiBeaker, HiGlobeAlt } from 'react-icons/hi';
+import { HiShieldCheck, HiCheckCircle, HiGlobeAlt, HiHeart } from 'react-icons/hi';
 
 const Quality = () => {
     const certifications = [
-        { name: "ISO 22000", color: "bg-blue-100 text-blue-800" },
-        { name: "FSSAI", color: "bg-green-100 text-green-800" },
-        { name: "Spice Board", color: "bg-orange-100 text-orange-800" },
-        { name: "Organic Certified", color: "bg-emerald-100 text-emerald-800" }
+        { name: "ISO 22000", subtitle: "Food Safety", color: "bg-blue-100 text-blue-800" },
+        { name: "FSSAI", subtitle: "India", color: "bg-green-100 text-green-800" },
+        { name: "APEDA", subtitle: "Export", color: "bg-purple-100 text-purple-800" },
+        { name: "Organic", subtitle: "Certified", color: "bg-emerald-100 text-emerald-800" },
+        { name: "HACCP", subtitle: "Safety", color: "bg-orange-100 text-orange-800" },
+        { name: "GMP", subtitle: "Manufacturing", color: "bg-pink-100 text-pink-800" }
     ];
 
-    const checks = [
+    const qualityPillars = [
         {
             icon: HiShieldCheck,
             title: "Purity Guaranteed",
-            description: "Zero adulteration policy with strict lab testing."
-        },
-        {
-            icon: HiBeaker,
-            title: "Moisture Control",
-            description: "Advanced drying techniques to prevent mold and toxins."
+            points: [
+                "Zero adulteration policy",
+                "Lab-tested products",
+                "Complete traceability"
+            ]
         },
         {
             icon: HiGlobeAlt,
-            title: "Global Standards",
-            description: "Compliant with EU, US, and Asian import regulations."
+            title: "Compliance Ready",
+            points: [
+                "EU, US, Middle East standards",
+                "Complete documentation",
+                "Regulatory expertise"
+            ]
+        },
+        {
+            icon: HiHeart,
+            title: "Sustainable Practices",
+            points: [
+                "Ethical sourcing",
+                "Eco-friendly packaging",
+                "Fair trade principles"
+            ]
+        },
+        {
+            icon: HiCheckCircle,
+            title: "Customer Satisfaction",
+            points: [
+                "Quality guarantee",
+                "Responsive support",
+                "Flexible solutions"
+            ]
         }
     ];
 
+    const whyChoose = [
+        "Competitive pricing without compromising quality",
+        "Reliable delivery schedules and tracking",
+        "Dedicated account managers for personalized service",
+        "Sample testing available before bulk orders",
+        "Flexible payment terms for long-term partners",
+        "Commitment to building lasting partnerships"
+    ];
+
     return (
-        <section className="py-12 md:py-20 bg-bg">
+        <section className="py-16 md:py-24 bg-white">
             <div className="container mx-auto px-4 md:px-6">
-                <div className="flex flex-col lg:flex-row gap-12 md:gap-16 items-center">
-
-                    {/* Content Side */}
-                    <motion.div
-                        initial={{ opacity: 0, x: -50 }}
-                        whileInView={{ opacity: 1, x: 0 }}
-                        viewport={{ once: true }}
-                        transition={{ duration: 0.8 }}
-                        className="w-full lg:w-1/2"
-                    >
-                        <span className="text-secondary font-semibold tracking-wider uppercase text-sm mb-2 block">Quality Assurance</span>
-                        <h2 className="text-3xl md:text-4xl lg:text-5xl font-serif font-bold text-primary mb-6">
-                            Uncompromising Standards
-                        </h2>
-                        <p className="text-text/80 text-base md:text-lg mb-6 md:mb-8 leading-relaxed">
-                            Quality is not just a buzzword for us; it's our core promise.
-                            Our state-of-the-art processing facility ensures that every batch meets international safety and hygiene standards.
-                        </p>
-
-                        <div className="grid grid-cols-2 gap-3 md:gap-4 mb-6 md:mb-8">
-                            {certifications.map((cert, index) => (
-                                <div key={index} className={`px-3 md:px-4 py-2 rounded-lg font-semibold text-center text-xs md:text-sm ${cert.color}`}>
-                                    {cert.name}
-                                </div>
-                            ))}
-                        </div>
-
-                        <div className="space-y-4 md:space-y-6">
-                            {checks.map((check, index) => (
-                                <div key={index} className="flex items-start space-x-3 md:space-x-4">
-                                    <div className="bg-white p-2 md:p-3 rounded-full shadow-sm text-accent flex-shrink-0">
-                                        <check.icon className="text-xl md:text-2xl" />
-                                    </div>
-                                    <div>
-                                        <h4 className="text-lg md:text-xl font-bold text-primary">{check.title}</h4>
-                                        <p className="text-text/70 text-sm md:text-base">{check.description}</p>
-                                    </div>
-                                </div>
-                            ))}
-                        </div>
-                    </motion.div>
-
-                    {/* Visual Side */}
-                    <motion.div
-                        initial={{ opacity: 0, x: 50 }}
-                        whileInView={{ opacity: 1, x: 0 }}
-                        viewport={{ once: true }}
-                        transition={{ duration: 0.8 }}
-                        className="w-full lg:w-1/2"
-                    >
-                        <div className="grid grid-cols-2 gap-4">
-                            <div className="space-y-4 mt-8">
-                                <div className="h-48 bg-white rounded-2xl shadow-lg flex items-center justify-center text-gray-400">Lab Test</div>
-                                <div className="h-64 bg-primary rounded-2xl shadow-lg flex items-center justify-center text-white/50">Sorting</div>
-                            </div>
-                            <div className="space-y-4">
-                                <div className="h-64 bg-secondary rounded-2xl shadow-lg flex items-center justify-center text-white/50">Inspection</div>
-                                <div className="h-48 bg-white rounded-2xl shadow-lg flex items-center justify-center text-gray-400">Packaging</div>
-                            </div>
-                        </div>
-                    </motion.div>
-
+                {/* Header */}
+                <div className="text-center mb-12 md:mb-16">
+                    <span className="text-secondary font-semibold tracking-wider uppercase text-sm mb-2 block">
+                        Quality Assurance
+                    </span>
+                    <h2 className="text-3xl md:text-4xl lg:text-5xl font-serif font-bold text-primary mb-4">
+                        Quality You Can Trust
+                    </h2>
+                    <p className="text-text/70 text-base md:text-lg max-w-2xl mx-auto">
+                        International standards meet Indian excellence in every product we export.
+                    </p>
                 </div>
+
+                {/* Certifications */}
+                <motion.div
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    className="mb-12 md:mb-16"
+                >
+                    <h3 className="text-xl md:text-2xl font-serif font-bold text-primary mb-6 text-center">
+                        Our Certifications
+                    </h3>
+                    <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
+                        {certifications.map((cert, index) => (
+                            <motion.div
+                                key={index}
+                                initial={{ opacity: 0, scale: 0.9 }}
+                                whileInView={{ opacity: 1, scale: 1 }}
+                                viewport={{ once: true }}
+                                transition={{ delay: index * 0.1 }}
+                                className={`${cert.color} rounded-xl p-4 text-center hover:shadow-lg transition-shadow`}
+                            >
+                                <div className="font-bold text-base md:text-lg mb-1">{cert.name}</div>
+                                <div className="text-xs opacity-75">{cert.subtitle}</div>
+                            </motion.div>
+                        ))}
+                    </div>
+                </motion.div>
+
+                {/* Quality Pillars */}
+                <div className="mb-12 md:mb-16">
+                    <h3 className="text-xl md:text-2xl font-serif font-bold text-primary mb-8 text-center">
+                        Our Quality Pillars
+                    </h3>
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                        {qualityPillars.map((pillar, index) => (
+                            <motion.div
+                                key={index}
+                                initial={{ opacity: 0, y: 20 }}
+                                whileInView={{ opacity: 1, y: 0 }}
+                                viewport={{ once: true }}
+                                transition={{ delay: index * 0.15 }}
+                                className="bg-bg rounded-2xl p-6 hover:shadow-xl transition-shadow"
+                            >
+                                <div className="bg-primary/10 w-14 h-14 rounded-xl flex items-center justify-center mb-4">
+                                    <pillar.icon className="text-3xl text-primary" />
+                                </div>
+                                <h4 className="text-lg font-bold text-primary mb-3">{pillar.title}</h4>
+                                <ul className="space-y-2">
+                                    {pillar.points.map((point, idx) => (
+                                        <li key={idx} className="text-sm text-text/70 flex items-start">
+                                            <span className="text-accent mr-2 mt-1">•</span>
+                                            <span>{point}</span>
+                                        </li>
+                                    ))}
+                                </ul>
+                            </motion.div>
+                        ))}
+                    </div>
+                </div>
+
+                {/* Why Choose Us */}
+                <motion.div
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    className="bg-primary/5 rounded-2xl p-6 md:p-10 border border-primary/10"
+                >
+                    <h3 className="text-2xl md:text-3xl font-serif font-bold text-primary mb-6 text-center">
+                        Why Choose PrimusOrigin?
+                    </h3>
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4 max-w-4xl mx-auto">
+                        {whyChoose.map((reason, index) => (
+                            <motion.div
+                                key={index}
+                                initial={{ opacity: 0, x: -20 }}
+                                whileInView={{ opacity: 1, x: 0 }}
+                                viewport={{ once: true }}
+                                transition={{ delay: index * 0.1 }}
+                                className="flex items-start gap-3"
+                            >
+                                <HiCheckCircle className="text-accent text-xl flex-shrink-0 mt-0.5" />
+                                <span className="text-text/80 text-sm md:text-base">{reason}</span>
+                            </motion.div>
+                        ))}
+                    </div>
+                </motion.div>
             </div>
         </section>
     );

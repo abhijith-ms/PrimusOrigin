@@ -38,8 +38,8 @@ const Footer = () => {
                             </div>
                         </Link>
                         <p className="text-white/80 text-sm leading-relaxed mb-6 max-w-md">
-                            Delivering the authentic essence of Indian spices to the world. 
-                            Sourced from the lush gardens of Kerala, processed with precision.
+                            Your trusted partner for premium Indian exports. Specializing in spices, textiles, 
+                            and grains with uncompromising quality and global reach.
                         </p>
                         
                         {/* Contact Info */}
@@ -92,17 +92,22 @@ const Footer = () => {
                     <div>
                         <h3 className="text-lg font-serif font-bold text-white mb-4">Our Products</h3>
                         <ul className="space-y-2 text-sm text-white/80">
-                            <li>Whole Black Pepper</li>
-                            <li>Ground Black Pepper</li>
-                            <li>Custom Packaging</li>
-                            <li>Bulk Export</li>
+                            <li className="flex items-center gap-2">
+                                <span className="text-accent">✓</span> Spices & Condiments
+                            </li>
+                            <li className="flex items-center gap-2">
+                                <span className="text-blue-400">⏳</span> Textiles & Garments
+                            </li>
+                            <li className="flex items-center gap-2">
+                                <span className="text-blue-400">⏳</span> Grains & Cereals
+                            </li>
                         </ul>
                         <div className="mt-6">
                             <h4 className="text-sm font-semibold text-accent mb-2">Certifications</h4>
                             <div className="flex flex-wrap gap-2">
                                 <span className="text-xs bg-white/10 px-2 py-1 rounded">ISO 22000</span>
                                 <span className="text-xs bg-white/10 px-2 py-1 rounded">FSSAI</span>
-                                <span className="text-xs bg-white/10 px-2 py-1 rounded">Organic</span>
+                                <span className="text-xs bg-white/10 px-2 py-1 rounded">APEDA</span>
                             </div>
                         </div>
                     </div>
