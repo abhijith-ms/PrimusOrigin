@@ -13,8 +13,7 @@ const About = () => {
         "End-to-end logistics management",
         "Custom packaging & branding solutions",
         "Competitive pricing & reliable delivery"
-
-    const stats = [
+];
         { number: "3", label: "Product Categories" },
         { number: "100%", label: "Quality Guarantee" },
         { number: "24/7", label: "Support Available" },
