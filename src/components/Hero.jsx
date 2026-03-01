@@ -113,10 +113,10 @@ const Hero = () => {
                     className="mt-16 md:mt-20 grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8 max-w-5xl mx-auto"
                 >
                     {[
-                        { number: "10+", label: "Years Experience", icon: "🏆" },
-                        { number: "15+", label: "Countries Served", icon: "🌍" },
                         { number: "3", label: "Product Categories", icon: "📦" },
-                        { number: "100%", label: "Quality Assured", icon: "✓" }
+                        { number: "24/7", label: "Customer Support", icon: "💬" },
+                        { number: "100%", label: "Quality Assured", icon: "✓" },
+                        { number: "Global", label: "Export Ready", icon: "🌍" }
                     ].map((stat, index) => (
                         <motion.div
                             key={index}
