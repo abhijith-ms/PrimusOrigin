@@ -13,15 +13,14 @@ const About = () => {
         "End-to-end logistics management",
         "Custom packaging & branding solutions",
         "Competitive pricing & reliable delivery"
-    ];
 
     const stats = [
-        { number: "10+", label: "Years Experience" },
-        { number: "15+", label: "Countries Served" },
         { number: "3", label: "Product Categories" },
-        { number: "100%", label: "Quality Guarantee" }
-    ];
+        { number: "100%", label: "Quality Guarantee" },
+        { number: "24/7", label: "Support Available" },
+        { number: "Global", label: "Export Ready" }
 
+    ];
     return (
         <section className="py-16 md:py-24 bg-bg">
             <div className="container mx-auto px-4 md:px-6">
@@ -150,7 +149,7 @@ const About = () => {
                         <span className="text-secondary font-semibold tracking-wider uppercase text-sm mb-2 block">Leadership</span>
                         <h2 className="text-3xl md:text-4xl lg:text-5xl font-serif font-bold text-primary">Meet Our Founders</h2>
                         <p className="text-text/70 text-base md:text-lg mt-4 max-w-2xl mx-auto">
-                            Driven by passion and expertise, our founders bring together years of experience 
+                            Driven by passion and vision, our founders are committed to building PrimusOrigin 
                             in international trade and business development.
                         </p>
                     </div>
