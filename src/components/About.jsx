@@ -169,7 +169,7 @@ const About = () => {
                                 <div className="aspect-square rounded-2xl overflow-hidden group-hover:scale-105 transition-transform duration-300 shadow-lg">
                                     <img 
                                         src={founder1Image} 
-                                        alt="Abhijith MS - Co-Founder" 
+                                        alt="Abhijith M Sreelan - Co-Founder" 
                                         className="w-full h-full object-cover"
                                     />
                                 </div>
@@ -178,7 +178,7 @@ const About = () => {
                             {/* Details */}
                             <div className="text-center">
                                 <h3 className="text-2xl font-serif font-bold text-primary mb-2">
-                                    Abhijith MS
+                                    Abhijith M Sreelan
                                 </h3>
                                 <p className="text-accent font-semibold mb-4 text-sm uppercase tracking-wider">
                                     Co-Founder
@@ -206,7 +206,7 @@ const About = () => {
                                 <div className="aspect-square rounded-2xl overflow-hidden group-hover:scale-105 transition-transform duration-300 shadow-lg">
                                     <img 
                                         src={founder2Image} 
-                                        alt="Sanjay PP - Co-Founder" 
+                                        alt="Sanjay P Pramod - Co-Founder" 
                                         className="w-full h-full object-cover"
                                     />
                                 </div>
@@ -215,7 +215,7 @@ const About = () => {
                             {/* Details */}
                             <div className="text-center">
                                 <h3 className="text-2xl font-serif font-bold text-primary mb-2">
-                                    Sanjay PP
+                                    Sanjay P Pramod
                                 </h3>
                                 <p className="text-accent font-semibold mb-4 text-sm uppercase tracking-wider">
                                     Co-Founder
