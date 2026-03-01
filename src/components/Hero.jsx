@@ -110,7 +110,7 @@ const Hero = () => {
                     initial={{ opacity: 0, y: 30 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ delay: 0.6, duration: 0.8 }}
-                    className="mt-16 md:mt-20 grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8 max-w-5xl mx-auto"
+                    className="mt-8 md:mt-12 grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8 max-w-5xl mx-auto"
                 >
                     {[
                         { number: "3", label: "Product Categories", icon: "📦" },
@@ -137,7 +137,7 @@ const Hero = () => {
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ delay: 1.2, duration: 0.8 }}
-                    className="mt-12 md:mt-16"
+                    className="mt-8 md:mt-12"
                 >
                     <p className="text-white/60 text-xs md:text-sm mb-4 uppercase tracking-wider">Certified & Trusted</p>
                     <div className="flex flex-wrap justify-center gap-4 md:gap-6">
